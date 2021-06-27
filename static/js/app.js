@@ -55,3 +55,6 @@ function runFilter() {
         });
       });
   };
+
+  var shapeData = tableData.filter(tableData => tableData.shape);
+console.log(shapeData);
