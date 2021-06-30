@@ -107,10 +107,16 @@ function runFilter() {
 
 
 // ** Reset Function ** //
-// When user clicks reset button it shows all UFO data ( Couldn't figure out how to clear input fields :( )
+// When user clicks reset button it shows all UFO data and clears input fields 
 function runReset() {
     d3.event.preventDefault();
     tbody.html("");
+    d3.select("#stockInput").property('value', '');;
+    d3.select("#datetime").property('value', '');;
+    d3.select("#cityFilter").property('value', '');;
+    d3.select("#stateFilter").property('value', '');;
+    d3.select("#countryFilter").property('value', '');;
+    d3.select("#shapeFilter").property('value', '');;
 
     tableData.forEach((ufoReport) => {
         var row = tbody.append("tr");
